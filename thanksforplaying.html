@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>30 Minute Countdown</title>
+  <title>thanks for playing</title>
 </head>
 <body>
+<div>
+  <p>
+    Please Wait
+  </p>
+  <p>
+    <span id="timer">30:00</span>
+  </p>
+  <script>
+    let timeLeft = 30 * 60;
+    function updateTimer() {
+      let minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
 
-<p>Time remaining: <span id="timer">30:00</span></p>
+      seconds = seconds < 10 ? "0" + seconds : seconds;
 
-<script>
-  let timeLeft = 30 * 60;
-  function updateTimer() {
-    let minutes = Math.floor(timeLeft / 60);
-    let seconds = timeLeft % 60;
+      document.getElementById("timer").textContent = minutes + ":" + seconds;
 
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    document.getElementById("timer").textContent = minutes + ":" + seconds;
-
-    if (timeLeft > 0) {
-      timeLeft--;
+      if (timeLeft > 0) {
+        timeLeft--;
+      }
     }
-  }
-
-  updateTimer();
-  setInterval(updateTimer, 1000);
-</script>
-
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+</div>
 </body>
 </html>
