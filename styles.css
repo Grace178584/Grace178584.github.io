@@ -4,6 +4,13 @@ body {
     color:white;
     font-family: 'Jersey 10';
 }
+button[type="submit"] {
+	background-color: black;
+	font-family: 'Jersey 10';
+	border: 0.5px solid white;
+	color: white;
+
+}
 input[type=text] {
 		color: white;
 		background-color: black;
